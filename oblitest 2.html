@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        div.page {
+            height: 100vh;
+            display: grid;
+            grid-template-areas: 'menu footer' 'menu footer' 'menu footer';
+        }
+
+        div.footer {
+            background-color: orangered;
+            grid-area: footer;
+        }
+
+        div.menu {
+            background-color: seagreen;
+            grid-area: menu;
+        }
+
+        .center {
+            margin: auto;
+            width: 87%;
+            border: 7px solid #b6ff00;
+            padding: 10px;
+        }
+
+        U {
+            display: none;
+            background-color: aqua;
+            padding: 20px;
+        }
+
+        div:hover u {
+            display: block;
+        }
+        .stilig2 {
+            border: solid #000000;
+        }
+
+        .stilig1 {
+            background-color: indianred;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+    <div class="page">
+        <div class="menu">
+            <section></section>
+            <u>
+                <button onclick="Ssomthing()">click</button>
+                <h2 id="123">Ja</h2>
+                <h2 onclick="doSomething()">Click her</h2>
+
+            </u>
+        </div>
+        <div class="footer">
+
+            <div id="bing" onclick="selectedDiv(this)">Heisan hippo hippo</div>
+            <div id="bing2" onclick="selectedDiv(this)">heisan håpp</div>
+            <input id="chika" type="checkbox" onchange="toggleStyle()" />
+            <input id="chika2" type="checkbox" onchange="toggleStyle2()" />
+            <div id="div1" onclick="select(this)"> klikk for å se et dyr!</div>
+            <p id="popp"></p>
+        </div>
+
+
+
+    </div>
+    <script>
+
+
+        alert('velkommen OBLI1!!!')
+        var isChecked = document.getElementById('chika');
+     
+        var selectedDivd2 = document.getElementById('bing2')
+        var selectedDivd1 = document.getElementById('bing')
+        var outputDiv;
+        function Ssomthing() {
+            var noe;
+            var clokke = new Date().getHours();
+            if (clokke < 6) {
+                noe = "332";
+            } else if (clokke < 12) {
+                noe = "Hade";
+            } else {
+                noe = "bra de da ";
+            }
+            document.getElementById("popp").innerHTML = noe;
+        }
+
+            function selectedDiv(selected) {
+                selectedDivd1 = selected;
+
+            }
+         function doSomething() {
+            document.getElementById('123').innerHTML = 'NEI';
+
+        } function toggleStyle() {
+            console.log(selectedDivd1)
+            isChecked.checked;
+            selectedDivd1.classList.toggle('stilig1');
+        }
+        function toggleStyle2() {
+            console.log("togglestyle #! kjører");
+            isChecked.checked;
+            selectedDivd1.classList.toggle('stilig2');
+        }
+
+
+        function select(mottatFraDivViaThis) {
+            console.log(mottatFraDivViaThis);
+                document.getElementById(mottatFraDivViaThis.id).innerHTML += "Katt";
+        }
+    </script>
+</body>
+</html>

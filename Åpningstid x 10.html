@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    Dag: <input id="day" onchange="showDayAndTime()" type="range" min="1" max="7" /><br />
+    Time: <input id="hour" onchange="showDayAndTime()" type="range" min="0" max="23" /><br />
+    Minutter: <input id="minute" onchange="showDayAndTime()" type="range" min="0" max="59" /><br />
+
+    <div id="dayAndTime" style="padding-top: 20px;"></div>
+    <div id=" Verdager" ></div>
+    <script type="text/javascript">
+
+        function showDayAndTime() {
+
+            var div = document.getElementById('dayAndTime');
+            var day = document.getElementById('day').value;
+            var hour = document.getElementById('hour').value;
+            var minute = document.getElementById('minute').value;
+            var dayNo = parseInt(day);
+            var Verdager = document.getElementById('Verdager')
+            var TestjaText;
+
+            div.innerHTML = day + hour + minute;
+
+
+
+            if (day == 1) {
+                div.innerHTML = 'mandag';
+
+            } if (day == 2) {
+                div.innerHTML = 'tirsdag';
+
+            } if (day == 3) {
+                div.innerHTML = 'onsdag';
+
+
+            } if (day == 4) {
+                div.innerHTML = 'torsdag';
+
+            } if (day == 5) {
+                div.innerHTML = 'fredag';
+
+            } if (day == 6) {
+                div.innerHTML = 'lørdag';
+
+            } if (day == 7) {
+                div.innerHTML = 'søndag';
+            }
+            if (day < 5) {
+                Verdager.innerHTML = 'mandag - torsdag';
+            }
+            else if (Day < 6) {
+                Verdager.innerHTML = 'fredag';
+            } else if (Day < 7) {
+                Verdager.innerHTML = 'lørdag';
+            }
+
+            else if (day < 8) {
+                Verdager.innerHTML = 'Søndag';
+
+            } 
+            
+            // mandag - torsdag 11 - 17
+
+            if (dayNo < 5) {
+                if (hour >= 11 && hour <= 17)
+                    div.innerHTML += 'det er åpent';
+            } 
+            else div.innerHTML + - 'nå er det stengt' 
+            
+            // fredag 11 - 18
+            
+         if (dayNo < 6) {
+            if (hour >= 11 && hour <= 18)
+                div.innerHTML += 'Det er åpent';
+
+            else div.innerHTML + - 'nå er det stengt';
+        }
+         //lørdag
+        if (dayNo < 7) {
+            if (hour >= 11 && hour <= 15)
+                div.innerHTML += 'Det er åpent';
+            else div.innerHTML + - 'nå er det stengt';
+        }
+
+            //søndag
+
+            if (dayNo < 8) {
+             div.innerHTML +- '<p>nå er det stengt<p>';
+            }
+
+
+
+        div.innerHTML = '<li>' + 'Dag: ' + day + '<li>' + 'Time: ' + hour + '<li>' + 'Minutter: ' + minute + '<li>' + 'Du har valgt: ' + TestjaText;
+        }
+        
+
+    </script>
+</body>
+</html>
