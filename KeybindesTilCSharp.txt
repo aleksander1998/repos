@@ -1,0 +1,3 @@
+KEy bindes C#
+Windows + R = CDM 
+Controll R Controll M = Resharp Exstract 

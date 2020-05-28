@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -25,7 +26,7 @@
     </style>
 </head>
 <body>
-    <input type="date" />
+    
     
     
     <table id="tasksTable"></table>
@@ -47,19 +48,19 @@
         { description: 'Lage middag', isDone: false },
         { description: 'Spise middag', isDone: false },
     ];
-    // Controller
-    var taskDescriptionInput = document.getElementById('taskDescription');
+        // Controller
+        let taskDescriptionInput = document.getElementById('taskDescription');
     function addTask() {
         tasks.push({
             description: taskDescriptionInput.value,
             name: taskname.value,
-            frist: taskFrist.value,
+            frist: taskfrist.value,
             dato: taskdato.value,
             isDone: false
         });
         taskDescriptionInput.value = '';
         taskname.value = '';
-        taskFrist.value = '';
+        taskfrist.value = '';
         taskdato.value = '';
         show();
     }
@@ -124,18 +125,13 @@
         tasks[index].editMode = true;
         show();
         }
-        function Datoe() {
-            
-        }
+       
         
     function updateTask(index) {
         const id = `editDescription${index}`;
         const inputTag = document.getElementById(id);
         const task = tasks[index];
-
         task.description = inputTag.value;
-        task.name = inputTag.value;
-        task.frist = inputTag.value;
         task.editMode = false;
         
         show();

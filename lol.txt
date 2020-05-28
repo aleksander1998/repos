@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        
+        table, tr, td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            padding: 4px;
+        }
+
+        th {
+            color: white;
+            text-align: center;
+            
+           
+           
+            
+        }
+
+        tr:nth-child(even) {
+           
+            background-color: #cccccc;
+        }
+
+        tr:nth-child(odd) {
+            
+            background-color: #cccccc;
+        }
+
+
+        
+    </style>
+
+</head>
+
+<body>
+        
+        
+
+        
+        <div id="imgdiv" class="div7">
+
+        </div>
+        <table class="div2" id="UsesTable"></table>
+
+
+        <script>
+            // Modelj3
+
+            let Uses = {
+                modules: {
+                module1: 
+                    {
+                    isDone: true, 
+                    names: ["gunnar","heisad",] 
+                },
+
+                module2: {
+                    isDone: true, 
+                    names: ["gunnar","heisad",] 
+                },
+                module3: {
+                isDone: true, 
+                names: ["gunnar","heisad",] 
+            },
+                }
+            }
+
+
+            let html;
+            createTableHeader();
+            function createTableHeader() {
+                html = `<tr>
+                                  <th onclick="shownames(this.innerText)"> modul1</th>
+                                <th onclick="shownames(this.innerText)">modul2</th>
+                                  <th onclick="shownames(this.innerText)">modul3</th>
+                                 
+                                                
+                                                                                          </tr>`;
+            }
+
+            let namesToBePrinted = "";
+            // Contmodul3er
+
+            function AddUses() {
+                Uses.push({
+
+                    modul1: Usesmodul1.value,
+                    modul2: Usesmodul2.value,
+                    modul3: Usesmodul3.value,
+                    isDone: false
+                });
+
+                Usesmodul1.value = '';
+                Usesmodul2.value = '';
+                Usesmodul3.value = '';
+
+                show();
+            }
+            // View
+            let UsesTable = document.getElementById('UsesTable');
+            show();
+            function show() {
+
+                console.log(`names : ${namesToBePrinted}`);
+                UsesTable.innerHTML = html;
+            }
+            
+            
+
+
+            function updateTask(index) {
+
+                const inputTag = document.getElementById(id);
+                const Uses = Uses[index];
+
+                Uses.modul1 = inputTag.value;
+                Uses.modul2 = inputTag.value;
+                
+                Uses.modul3 = inputTag.value;
+              
+
+                show();
+            }
+
+            function selectValue(choice, value) {
+                selectedValues[choice] = value;
+            }
+
+            function shownames(clickedHeader) {
+                createTableHeader();
+                html += `<tr id="row"> `;
+                let row = document.getElementById("row");
+                for (selected of Uses) {
+                    if (selected.modul == clickedHeader) {
+                        for (name of selected.names) {
+                            const blankColumns = {
+                                modul1: 0,
+                                modul2: 1,
+                                modul3: 2,
+                        
+                            
+                            };
+                            let blankColumnCount = blankColumns[selected.modul];
+                            html += "<tr>"
+                            while (blankColumnCount > 0) {
+                                html += '<td style="visibility: hidden !important"></td>';
+                                blankColumnCount--;
+                            }
+
+                            html += ` <td onclick="selectValue('${selected.modul}','${name}')">${name}<button onclick="ShowEditMod()">edit</button></td>  </tr>  `;
+                        }
+                    }
+
+                }
+                html += `</tr> </table>`;
+
+
+                show();
+            }
+//view 
+function ShowEditMod() {
+    html = `
+<button type="button" id="edit" onclick"editUser()">Edit</button>
+}`
+function editUser(){
+    let edit = document.getElementById('edit').value
+
+        edit.push({Uses.names})
+    }
+
+
+
+    // html = `<tr>
+  
+    //                               <th onclick="shownames(this.innerText)"> modul1</th>
+    //                             <th onclick="shownames(this.innerText)">modul2</th>
+    //                               <th onclick="shownames(this.innerText)">modul3</th>
+                                 
+                                                
+    //                                                                                       </tr> 
+    // <td><input type = "text"> <button onclick="ShowSaveMod()">save</button></td>  </tr>  `
+    // show();
+}
+//function SaveEditMod(){
+     
+//}
+function showSaveMod(index){
+const id = `editOn${index}`;
+            const inputTag = document.getElementById(id);
+            name[index].descripton = inputTag.value;
+            name[index].editMode = false;
+
+}
+        </script>
+
+    </div>
+    <script src="TestOverview.js"></script>
+</body>
+</html>

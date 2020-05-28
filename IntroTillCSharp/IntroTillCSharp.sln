@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1022
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTillCSharp", "IntroTillCSharp\IntroTillCSharp.csproj", "{D53703E4-4269-4AD9-AF64-0E0CEE495CEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D53703E4-4269-4AD9-AF64-0E0CEE495CEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D53703E4-4269-4AD9-AF64-0E0CEE495CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D53703E4-4269-4AD9-AF64-0E0CEE495CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D53703E4-4269-4AD9-AF64-0E0CEE495CEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95374552-9C07-46D3-8CAB-7B6996E8505D}
+	EndGlobalSection
+EndGlobal
