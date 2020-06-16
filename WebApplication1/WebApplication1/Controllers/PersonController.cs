@@ -38,7 +38,7 @@ namespace WebApplication1.Controllers
         public async  Task <int> Create(Person person)
         {
             return await Task.Run(() => 1);
-        }
+        } 
 
         [HttpPut]
         public async Task<int> Edit(Person person)

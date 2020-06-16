@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1022
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUmberPuzzelWeb.API", "NUmberPuzzelWeb2\NUmberPuzzelWeb.API.csproj", "{4C1B0F7C-E805-438D-8D12-789405C5DFF2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10 Infrastructere", "10 Infrastructere", "{058C9197-E68E-40AC-8113-5B3179F24DAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "40 Core", "40 Core", "{5CC82F0E-AF98-4E9C-B06C-D93EBFEDC44D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "90 Test", "90 Test", "{DDFD17C7-7A22-4CD5-AD04-4DB992BCA44C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberPuzzleWeb.Core", "ClassLibrary1\NumberPuzzleWeb.Core.csproj", "{26FFF00B-41BC-4BD0-89A2-A6C5A3FAEA33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberPuzzleWebUnitTest", "NumberPuzzleWebUnitTest\NumberPuzzleWebUnitTest.csproj", "{D3C0FFC0-1E9D-4A2D-88C0-4854EC522F6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberPuzzleWeb.Infrastructure.DataAccess", "NumberPuzzleWeb.Infrastructure.DataAccess\NumberPuzzleWeb.Infrastructure.DataAccess.csproj", "{1D8D3C9B-6F0B-4C38-935E-582276DAE75D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C1B0F7C-E805-438D-8D12-789405C5DFF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C1B0F7C-E805-438D-8D12-789405C5DFF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C1B0F7C-E805-438D-8D12-789405C5DFF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C1B0F7C-E805-438D-8D12-789405C5DFF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26FFF00B-41BC-4BD0-89A2-A6C5A3FAEA33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26FFF00B-41BC-4BD0-89A2-A6C5A3FAEA33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26FFF00B-41BC-4BD0-89A2-A6C5A3FAEA33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26FFF00B-41BC-4BD0-89A2-A6C5A3FAEA33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3C0FFC0-1E9D-4A2D-88C0-4854EC522F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3C0FFC0-1E9D-4A2D-88C0-4854EC522F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3C0FFC0-1E9D-4A2D-88C0-4854EC522F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3C0FFC0-1E9D-4A2D-88C0-4854EC522F6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D8D3C9B-6F0B-4C38-935E-582276DAE75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8D3C9B-6F0B-4C38-935E-582276DAE75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8D3C9B-6F0B-4C38-935E-582276DAE75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8D3C9B-6F0B-4C38-935E-582276DAE75D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4C1B0F7C-E805-438D-8D12-789405C5DFF2} = {058C9197-E68E-40AC-8113-5B3179F24DAB}
+		{26FFF00B-41BC-4BD0-89A2-A6C5A3FAEA33} = {5CC82F0E-AF98-4E9C-B06C-D93EBFEDC44D}
+		{D3C0FFC0-1E9D-4A2D-88C0-4854EC522F6D} = {DDFD17C7-7A22-4CD5-AD04-4DB992BCA44C}
+		{1D8D3C9B-6F0B-4C38-935E-582276DAE75D} = {058C9197-E68E-40AC-8113-5B3179F24DAB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {111A4214-0CB8-4BFF-B086-729939264435}
+	EndGlobalSection
+EndGlobal
